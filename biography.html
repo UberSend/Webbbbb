@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bio</title>
+    <style>
+      body {
+        background: linear-gradient(to bottom right, #1e7225, #50ee55);
+        background-size: 400% 400%;
+        animation: gradient 5s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      header {
+        position: relative;
+        height: 500px;
+        overflow: hidden;
+      }
+
+      header video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        filter: blur(10px);
+        z-index: -1;
+      }
+
+      header h1 {
+        font-family: "Abril Fatface", cursive;
+        position: absolute;
+        top: 37%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 4em;
+        text-align: center;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+      }
+      body {
+        margin: 0;
+      }
+
+      header video {
+        object-fit: cover;
+      }
+      .separator {
+        height: 10px;
+        background-color: white;
+        margin-top: -3px;
+        transition: margin-top 0.3s ease-in-out;
+        filter: blur(1px);
+      }
+      .header:hover ~ .separator {
+        margin-top: 0;
+        filter: none;
+      }
+      .special{
+        color: #fff;
+      }
+      img{
+        border-radius:50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <video src="leaves.mp4" autoplay loop muted></video>
+      <h1>Добро пожаловать !</h1>
+    </header>
+    <div class="separator"></div>
+    <div class="container_body">
+      <img
+        src="./jack2.jpeg"
+        alt="foto"
+        width="300"
+        height="300"
+        align="left"
+      />
+      <h1 class="special">Жак Фреско</h1>
+      <p>
+        <font color="white" size="6"
+          >Жак Фреско — американский футуролог, занимался промышленным дизайном и был производственным инженером. Основал организацию «Проект Венера».
+
+          Жак Фреско всемирно известная персона, интереснейший и увлечённый человек. Самый известный футурист. Сконструировал и построил пассивный дом, который не нуждался в дополнительных затратах. Его цель в жизни — обустройство нового мирового порядка.
+          
+          Жак Фреско родился в Бруклине, США,13 марта 1916 года. Его родители евреи, выходцы из Турции. Отец Жака — Исаак, родился в Стамбуле, а мама Лена родилась и жила в Иерусалиме. В семье было ещё двое детей. Старший брат Давид и младшая сестрёнка Фреда. Фреско учился в местной школе Бруклина. Он с самого раннего детства начал мыслить глобально.
+
+Во многом, на воспитание и восприятие устройства мира, оказали влияние его дед и старший брат Давид. Они рассказывали ребёнку понятным, доступным для его осознания языком теорию эволюции, отношения между людьми. Итогом этих разговоров стало негативное отношение к религии. Собственно, ребёнок сам видел несовершенство и несправедливость, которая творилась вокруг него. Его детство проходило во время Великой депрессии. Его отец, который работал простым служащим, был уволен. Предприятие, на котором он трудился — закрылось. И достаточно долгое время деньги в дом приносила только мама Жака. Единственная кормилица семьи трудилась швеёй.
+
+      </p>
+    </div>
+  </body>
+</html>

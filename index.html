@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webbb</title>
+  </head>
+  <style>
+    table {
+      margin-top: 100px;
+      margin-bottom: 100px;
+      margin-left: 400px;
+
+      height: auto; /* автоматический расчет высоты таблицы */
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 800px;
+
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+
+      border-collapse: separate; /* разделять границы ячеек */
+      border-spacing: 0 10px; /* задать расстояние между ячейками (вертикальное, горизонтальное) */
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+
+      font-size: 14px; /* увеличить размер шрифта в ячейках */
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+    @font-face {
+      font-family: "Abril Fatface";
+      src: url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+    }
+    body {
+      background: linear-gradient(to bottom right, #1e7225, #50ee55);
+      background-size: 400% 400%;
+      animation: gradient 5s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    header {
+      position: relative;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    header video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      filter: blur(10px);
+      z-index: -1;
+    }
+
+    header h1 {
+      font-family: "Abril Fatface", cursive;
+      position: absolute;
+      top: 37%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 4em;
+      text-align: center;
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    }
+    body {
+      margin: 0;
+    }
+
+    header video {
+      object-fit: cover;
+    }
+    .separator {
+      height: 10px;
+      background-color: white;
+      margin-top: -3px;
+      transition: margin-top 0.3s ease-in-out;
+      filter: blur(1px);
+    }
+    .header:hover ~ .separator {
+      margin-top: 0;
+      filter: none;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 300px;
+      height: 500px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+      margin: 20px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    .card img {
+      width: 200px;
+      height: 200px;
+      margin-top: 40px;
+      margin-left: 10px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      margin-bottom: 20px;
+      border-radius: 50%;
+    }
+
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 20px;
+      color: #666;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card-text {
+      font-size: 30px;
+      line-height: 1.5;
+      width: 100%;
+      text-align: justify;
+      padding: 20px;
+      text-align: center;
+      font-family: "Abril Fatface", cursive;
+    }
+    h2 {
+      line-height: 0.5;
+      width: 100%;
+      text-align: justify;
+
+      text-align: center;
+      font-family: "Abril Fatface", cursive;
+    }
+    .employ {
+      font-family: "Abril Fatface", cursive;
+      color: #fff;
+      font-size: 5em;
+      font-weight: bolder;
+      text-align: center;
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    }
+    .container_bio {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      color: #fff;
+      max-width: 900px;
+      margin-left: 380px;
+
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .bio-section {
+      display: flex;
+      align-items: center;
+      max-width: 800px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .bio-photo {
+      width: 300px;
+      height: 300px;
+      border-radius: 10%;
+      object-fit: cover;
+      margin-left: 20px;
+    }
+
+    .bio-content {
+      flex: 1;
+    }
+
+    .bio-content h2 {
+      margin-top: 0;
+    }
+
+    .bio-content p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .bio-content a {
+      text-decoration: rgba(166, 166, 166, 0.1);
+      font-size: 17px;
+    }
+  </style>
+  <body>
+    <header>
+      <video src="leaves.mp4" autoplay loop muted></video>
+      <h1>Добро пожаловать !</h1>
+    </header>
+    <div class="separator"></div>
+    <p class="employ">Наши доблестные сотрудники</p>
+    <div class="card-container">
+      <div class="card">
+        <img src="./employeee/1.jpg" alt="alt-text" />
+        <h2>Аксель Джонсон</h2>
+        <p class="card-text">
+          Душа компании, умеет вовлекать людей в различные дела своей большой
+          душой
+        </p>
+      </div>
+      <div class="card">
+        <img src="./employeee/2.jpg" alt="alt-text" />
+        <h2>Джони Ист</h2>
+        <p class="card-text">Зам. директора, инициатор диалогов у кулера</p>
+      </div>
+      <div class="card">
+        <img src="./employeee/3.jpg" alt="alt-text" />
+        <h2>Нилл Киггерс</h2>
+        <p class="card-text">
+          Ген. директор компании, тройной обладатель премии сотрудник месяца
+        </p>
+      </div>
+      <div class="card">
+        <img src="./employeee/4.jpg" alt="alt-text" />
+        <h2>Алекс Вайт</h2>
+        <p class="card-text">
+          Консультант - специалист, заведует офисным кофетерием
+        </p>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Наименование товара</th>
+          <th>Количество</th>
+          <th>Цена за еденицу руб.</th>
+          <th>Стоимость руб.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Огурцы</td>
+          <td>3</td>
+          <td>70</td>
+          <td>210</td>
+        </tr>
+        <tr>
+          <td>Помидоры</td>
+          <td>10</td>
+          <td>94.7</td>
+          <td>947</td>
+        </tr>
+        <tr>
+          <td>Картофель</td>
+          <td>24</td>
+          <td>78</td>
+          <td>1 872</td>
+        </tr>
+        <tr>
+          <td>Яйца</td>
+          <td>10</td>
+          <td>10</td>
+          <td>100</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="separator"></div>
+    <div class="container_bio">
+      <section class="bio-section">
+        <div class="bio-content">
+          <h2>Жак Фреско</h2>
+          <p>
+            Жак Фреско — американский футуролог, занимался промышленным дизайном
+            и был производственным инженером. Основал организацию «Проект
+            Венера». Жак Фреско всемирно известная персона, интереснейший и
+            увлечённый человек. Самый известный футурист. Сконструировал и
+            построил пассивный дом, который не нуждался в дополнительных
+            затратах. Его цель в жизни — обустройство нового мирового порядка.
+            Детство. Жак Фреско родился в Бруклине, США,13 марта 1916 года.
+          </p>
+          <a href="./biography.html">Читать подробнее...</a>
+        </div>
+        <img class="bio-photo" src="./original.jpg" alt="Моя фотография" />
+      </section>
+    </div>
+    <div class="separator"></div>
+  </body>
+</html>
